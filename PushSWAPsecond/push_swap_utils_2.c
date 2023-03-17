@@ -6,7 +6,7 @@
 /*   By: tpicoule <tpicoule@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 14:52:17 by tpicoule          #+#    #+#             */
-/*   Updated: 2023/03/16 16:15:12 by tpicoule         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:32:57 by tpicoule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ int	ft_atoi(char *str)
 
 t_dblist	*ft_del_bot_list(t_dblist *list)
 {
+	t_node	*tmp;
+
 	if (!list)
 		return (NULL);
 	if (list->top == list->bot)
@@ -56,8 +58,6 @@ t_dblist	*ft_del_bot_list(t_dblist *list)
 		list = NULL;
 		return (dlist_new());
 	}
-	t_node	*tmp;
-	
 	tmp = list->bot;
 	list->bot = list->bot->prev;
 	list->bot->next = NULL;
@@ -70,6 +70,8 @@ t_dblist	*ft_del_bot_list(t_dblist *list)
 
 t_dblist	*ft_del_top_list(t_dblist *list)
 {
+	t_node	*tmp;
+
 	if (!list)
 		return (NULL);
 	if (list->top == list->bot)
@@ -78,8 +80,6 @@ t_dblist	*ft_del_top_list(t_dblist *list)
 		list = NULL;
 		return (dlist_new());
 	}
-	t_node	*tmp;
-
 	tmp = list->top;
 	list->top = list->top->next;
 	list->top->prev = NULL;

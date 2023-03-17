@@ -6,7 +6,7 @@
 /*   By: tpicoule <tpicoule@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 13:56:56 by tpicoule          #+#    #+#             */
-/*   Updated: 2023/03/16 16:36:34 by tpicoule         ###   ########.fr       */
+/*   Updated: 2023/03/17 17:33:53 by tpicoule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,20 @@ int	main(int argc, char **argv)
 	pilea = ft_add_bot(pilea, ft_atoi(argv[i]));
 	i++;
 	}
-	ft_print_pile(pilea);
+ 	ft_print_pile(pilea);
 	printf("\n pilea \n\n\n");
 	ft_print_pile(pileb);
 	printf("\n pileb \n\n\n");
-	
+
 	//instru
-	ft_rrb(pilea);
+	//ft_rrb(pilea);
+	//ft_two(pilea);
+	//ft_tree(pilea);
+	//ft_swap_a(pilea->top, pilea->top->next);
+	ft_pa(pileb, pilea);
+	write(1, "cacal\n", 6);
+	//ft_four(pileb, pilea);
+	//ft_swap_a(pilea->top, pilea->top->next);
 
 	printf("\n===========after algo==========\n\n");
 	ft_print_pile(pilea);

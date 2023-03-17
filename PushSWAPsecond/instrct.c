@@ -6,11 +6,23 @@
 /*   By: tpicoule <tpicoule@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 15:38:27 by tpicoule          #+#    #+#             */
-/*   Updated: 2023/03/16 16:42:52 by tpicoule         ###   ########.fr       */
+/*   Updated: 2023/03/17 17:33:42 by tpicoule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_swap_a(t_node *a, t_node *b)
+{
+	int	tmp;
+
+	if (!a || !b)
+		return ;
+	tmp = a->value;
+	a->value = b->value;
+	b->value = tmp;
+	write(1, "sa\n", 3);
+}
 
 void	ft_pa(t_dblist *pilea, t_dblist *pileb)
 {
@@ -46,33 +58,4 @@ void	ft_rb(t_dblist *pileb)
 	ft_add_bot(pileb, pileb->top->value);
 	ft_del_top_list(pileb);
 	write(1, "rb\n", 3);
-}
-
-void	ft_rra(t_dblist *pilea)
-{
-	if (!pilea)
-		return ;
-	ft_add_top(pilea, pilea->bot->value);
-	ft_del_bot_list(pilea);
-	write(1, "rra\n", 3);
-}
-
-void	ft_rrb(t_dblist *pileb)
-{
-	if (!pileb)
-		return ;
-	ft_add_top(pileb, pileb->bot->value);
-	ft_del_bot_list(pileb);
-	write(1, "rrb\n", 3);
-}
-
-void	ft_rrr(t_dblist *pilea, t_dblist *pileb)
-{
-	if (!pilea || !pileb)
-		return ;
-	ft_add_top(pilea, pilea->bot->value);
-	ft_del_bot_list(pilea);
-	ft_add_top(pileb, pileb->bot->value);
-	ft_del_bot_list(pileb);
-	write(1, "rrr\n", 4);
 }

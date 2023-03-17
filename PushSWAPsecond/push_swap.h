@@ -6,7 +6,7 @@
 /*   By: tpicoule <tpicoule@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 12:59:30 by tpicoule          #+#    #+#             */
-/*   Updated: 2023/03/16 16:36:50 by tpicoule         ###   ########.fr       */
+/*   Updated: 2023/03/17 17:20:17 by tpicoule         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void		ft_ra(t_dblist *pilea);
 void		ft_rb(t_dblist *pileb);
 void		ft_rra(t_dblist *pilea);
 void		ft_rrb(t_dblist *pileb);
-
+t_dblist	*ft_two(t_dblist *pilea);
+t_dblist	*ft_tree(t_dblist *pilea);
+t_dblist	*ft_four(t_dblist *pilea, t_dblist *pileb);
 
 #endif
